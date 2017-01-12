@@ -105,50 +105,22 @@ namespace Calc_Xamarin
 
                 switch ((sender as Button).Id)
                 {
-                    case Resource.Id.buttonEqu:
-                        Calculate(bb);
-                        // Act = "=";
-                        lastActEqu = true;
-                        FindViewById<EditText>(Resource.Id.editText1).Text = summ.ToString();
-                        reset = true;
-                        break;
-                    case Resource.Id.buttonPlus:
+                    case Resource.Id.buttonMR:
 
-                        Calculate(bb);
-                        Act = "+";
-                        FindViewById<EditText>(Resource.Id.editText1).Text = summ.ToString();
-                        reset = true;
-                        break;
-                    case Resource.Id.buttonMinus:
-
-                        Calculate(bb);
-                        Act = "-";
-                        FindViewById<EditText>(Resource.Id.editText1).Text = summ.ToString();
-                        reset = true;
-                        break;
-                    case Resource.Id.buttonMult:
-
-                        Calculate(bb);
-                        Act = "*";
-                        FindViewById<EditText>(Resource.Id.editText1).Text = summ.ToString();
-                        reset = true;
-                        break;
-                    case Resource.Id.buttonDiv:
-
-                        Calculate(bb);
-                        Act = "/";
-                        FindViewById<EditText>(Resource.Id.editText1).Text = summ.ToString();
-                        reset = true;
+                        FindViewById<EditText>(Resource.Id.editText1).Text = mem.ToString();
 
                         break;
-                    case Resource.Id.buttonSq:
-                        Act = "S";
-                        Calculate(float.Parse(FindViewById<EditText>(Resource.Id.editText1).Text));
-                        Act = "";
-                        FindViewById<EditText>(Resource.Id.editText1).Text = summ.ToString();
-                        reset = true;
+                    case Resource.Id.buttonMP:
+
+
+                        mem=float.Parse(FindViewById<EditText>(Resource.Id.editText1).Text);
 
                         break;
+                    case Resource.Id.buttonMC:
+
+                    mem = 0;
+                        break;
+                  
                 
             }
         }
